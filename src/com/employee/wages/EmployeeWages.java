@@ -153,45 +153,5 @@ public class EmployeeWages {
 			System.out.println("total working days will be: " + days);
 			System.out.println("total working hours will be: " + workHr);
 		}
-	
-		public void getCompanyWage(String company,int wagePerHr,int noOfWoringDays,int maxHrsMonths) {
-			
-			this.company = company;
-			this.wagePerHr = wagePerHr;
-			this.noOfWoringDays = noOfWoringDays;
-			this.maxHrsMonths = maxHrsMonths;
 
-			int empHr = 0;
-			int total = 0;
-			int days = 0;
-			int workHr = 0;
-			
-			while(days < noOfWoringDays && workHr < maxHrsMonths)
-			{
-			int emp = (int) Math.floor(Math.random() * 10) %  3;
-			
-			switch(emp) { 
-				case 1:
-					empHr = 8;
-					break;
-				case 2:
-					empHr = 4;
-					break;
-				case 3:
-					empHr = 0;
-					break;
-				default:
-			}
-			
-			int dailyWage = (wagePerHr * empHr);
-			total = (total + dailyWage);
-			days = (days+1);
-			workHr = (workHr + empHr);
-			}
-			
-			System.out.println("total salary for " + company + "is :" + total);
-			System.out.println("total working days will be: " + days);
-			System.out.println("total working hours will be: " + workHr);
-		}
-	
 }
